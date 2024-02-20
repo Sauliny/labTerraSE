@@ -1,2 +1,8 @@
 # Archivo de configuración de Bucket S3
-# no hay nada aca
+terraform {
+  backend "s3" {
+    bucket = "sebuckettfstate"
+    key    = "sebuckettfstate.tfstate"
+    region = "us-east-1"
+  }
+}
